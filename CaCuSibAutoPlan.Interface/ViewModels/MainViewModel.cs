@@ -504,7 +504,8 @@ namespace CaCuSibAutoPlan.Interface.ViewModels
         private void ShowError(string actionName, Exception ex)
         {
             StatusMessage = "Error en " + actionName + ": " + ex.Message;
-            MessageBox.Show(ex.ToString(), "Error en " + actionName, MessageBoxButton.OK, MessageBoxImage.Error);
+            //MessageBox.Show(ex.ToString(), "Error en " + actionName, MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageBox.Show(ex.Message, "Error en " + actionName, MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         private void RaiseCommandStates()

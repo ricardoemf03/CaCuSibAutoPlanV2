@@ -94,10 +94,10 @@
                             CornerRadius="35"
                             HorizontalAlignment="Right"
                             VerticalAlignment="Center"
-                            Padding="4"
+                            Padding="0"
                             ClipToBounds="True">
                         <Image Source="pack://application:,,,/CaCuSibAutoPlan.Interface;component/Views/incan-logo.png"
-                               Stretch="Uniform"/>
+                               Stretch="Uniform" Margin="-1"/>
                     </Border>
                 </Grid>
             </Border>
