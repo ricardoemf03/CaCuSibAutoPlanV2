@@ -4,14 +4,14 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
-using CaCuSibAutoPlan.Interface.Commands;
-using CaCuSibAutoPlan.Interface.Models;
-using CaCuSibAutoPlan.Interface.Services;
-using CaCuSibAutoPlan.Shared.Models;
-using CaCuSibAutoPlan.Shared.Services;
+using CaCuSibAutoPlan.Commands;
+using CaCuSibAutoPlan.Models;
+using CaCuSibAutoPlan.Services;
+//using CaCuSibAutoPlan.Models;
+//using CaCuSibAutoPlan.Services;
 using VMS.TPS.Common.Model.API;
 
-namespace CaCuSibAutoPlan.Interface.ViewModels
+namespace CaCuSibAutoPlan.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {

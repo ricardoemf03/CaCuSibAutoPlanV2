@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using System.Windows.Data;
 
-namespace CaCuSibAutoPlan.Interface.Converters
+namespace CaCuSibAutoPlan.Converters
 {
     public class RadioButtonStringConverter : IValueConverter
     {

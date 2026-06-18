@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Input;
 
-namespace CaCuSibAutoPlan.Interface.Commands
+namespace CaCuSibAutoPlan.Commands
 {
     public class RelayCommand : ICommand
     {

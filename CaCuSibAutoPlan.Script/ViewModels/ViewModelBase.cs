@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace CaCuSibAutoPlan.Interface.ViewModels
+namespace CaCuSibAutoPlan.ViewModels
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {

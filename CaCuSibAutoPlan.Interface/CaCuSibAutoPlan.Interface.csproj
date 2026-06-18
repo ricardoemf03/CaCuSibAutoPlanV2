@@ -1,12 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">x64</Platform><ProjectGuid>{C6CF7D3A-5B7C-4F61-8B74-4E76C56386B7}</ProjectGuid><OutputType>library</OutputType><RootNamespace>CaCuSibAutoPlan.Interface</RootNamespace><AssemblyName>CaCuSibAutoPlan.Interface</AssemblyName><TargetFrameworkVersion>v4.8</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids></PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'"><PlatformTarget>x64</PlatformTarget><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>..\..\plugins\</OutputPath><DefineConstants>DEBUG;TRACE</DefineConstants><WarningLevel>4</WarningLevel></PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'"><PlatformTarget>x64</PlatformTarget><DebugType>pdbonly</DebugType><Optimize>true</Optimize><OutputPath>..\..\plugins\</OutputPath><DefineConstants>TRACE</DefineConstants><WarningLevel>4</WarningLevel></PropertyGroup>
-  <ItemGroup><Reference Include="System" /><Reference Include="System.Core" /><Reference Include="System.Data" /><Reference Include="System.Xaml" /><Reference Include="System.Xml" /><Reference Include="System.Xml.Linq" /><Reference Include="WindowsBase" /><Reference Include="PresentationCore" /><Reference Include="PresentationFramework" /><Reference Include="VMS.TPS.Common.Model.API"><HintPath>C:\Program Files (x86)\Varian\RTM\18.0\esapi\API\VMS.TPS.Common.Model.API.dll</HintPath><Private>False</Private></Reference><Reference Include="VMS.TPS.Common.Model.Types"><HintPath>C:\Program Files (x86)\Varian\RTM\18.0\esapi\API\VMS.TPS.Common.Model.Types.dll</HintPath><Private>False</Private></Reference></ItemGroup>
-  <ItemGroup><ProjectReference Include="..\CaCuSibAutoPlan.Shared\CaCuSibAutoPlan.Shared.csproj"><Project>{B0D97EB6-74F8-4E40-92D1-8B7146E00F11}</Project><Name>CaCuSibAutoPlan.Shared</Name></ProjectReference></ItemGroup>
-  <ItemGroup><Compile Include="Commands\RelayCommand.cs" /><Compile Include="Converters\RadioButtonStringConverter.cs" /><Compile Include="Models\PrescriptionOption.cs" /><Compile Include="Models\PrescriptionTargetOption.cs" /><Compile Include="Models\PtvOption.cs" /><Compile Include="Models\ScriptModule.cs" /><Compile Include="Services\AutoPlanWorkflowService.cs" /><Compile Include="Services\DllPathResolver.cs" /><Compile Include="Services\EsapiDataService.cs" /><Compile Include="Services\ScriptRunnerService.cs" /><Compile Include="ViewModels\MainViewModel.cs" /><Compile Include="ViewModels\ViewModelBase.cs" /><Compile Include="Views\MainWindow.xaml.cs"><DependentUpon>MainWindow.xaml</DependentUpon></Compile></ItemGroup>
-  <ItemGroup><Page Include="Views\MainWindow.xaml"><Generator>MSBuild:Compile</Generator><SubType>Designer</SubType></Page></ItemGroup>
-  <ItemGroup><Resource Include="Views\incan-logo.png" /></ItemGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{C6CF7D3A-5B7C-4F61-8B74-4E76C56386B7}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>CaCuSibAutoPlan.Interface</RootNamespace>
+    <AssemblyName>CaCuSibAutoPlan.Interface</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\plugins\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="VMS.TPS.Common.Model.API">
+      <HintPath>C:\Program Files (x86)\Varian\RTM\18.0\esapi\API\VMS.TPS.Common.Model.API.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VMS.TPS.Common.Model.Types">
+      <HintPath>C:\Program Files (x86)\Varian\RTM\18.0\esapi\API\VMS.TPS.Common.Model.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CaCuSibAutoPlan.Shared\CaCuSibAutoPlan.Shared.csproj">
+      <Project>{B0D97EB6-74F8-4E40-92D1-8B7146E00F11}</Project>
+      <Name>CaCuSibAutoPlan.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="Converters\" />
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

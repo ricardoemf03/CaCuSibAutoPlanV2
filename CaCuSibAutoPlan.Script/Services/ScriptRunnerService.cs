@@ -1,11 +1,11 @@
 using System;
 using System.Reflection;
-using CaCuSibAutoPlan.Interface.Models;
-using CaCuSibAutoPlan.Shared.Models;
-using CaCuSibAutoPlan.Shared.Services;
+using CaCuSibAutoPlan.Models;
+//using CaCuSibAutoPlan.Models;
+using CaCuSibAutoPlan.Services;
 using VMS.TPS.Common.Model.API;
 
-namespace CaCuSibAutoPlan.Interface.Services
+namespace CaCuSibAutoPlan.Services
 {
     public class ScriptRunnerService
     {

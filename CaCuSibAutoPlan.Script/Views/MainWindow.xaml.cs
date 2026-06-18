@@ -1,6 +1,6 @@
 using System.Windows;
 
-namespace CaCuSibAutoPlan.Interface.Views
+namespace CaCuSibAutoPlan.Views
 {
     public partial class MainWindow : Window
     {

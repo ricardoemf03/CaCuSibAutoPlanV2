@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace CaCuSibAutoPlan.Interface.Services
+namespace CaCuSibAutoPlan.Services
 {
     public class DllPathResolver
     {

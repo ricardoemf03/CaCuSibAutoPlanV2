@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CaCuSibAutoPlan.Interface.Models;
+using CaCuSibAutoPlan.Models;
 using VMS.TPS.Common.Model.API;
 
-namespace CaCuSibAutoPlan.Interface.Services
+namespace CaCuSibAutoPlan.Services
 {
     public class EsapiDataService
     {

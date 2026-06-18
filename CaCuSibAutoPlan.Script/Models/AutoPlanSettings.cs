@@ -1,6 +1,6 @@
 using System;
 
-namespace CaCuSibAutoPlan.Shared.Models
+namespace CaCuSibAutoPlan.Models
 {
     [Serializable]
     public class AutoPlanSettings

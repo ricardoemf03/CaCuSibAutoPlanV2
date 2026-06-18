@@ -1,4 +1,4 @@
-namespace CaCuSibAutoPlan.Interface.Models
+namespace CaCuSibAutoPlan.Models
 {
     public class PrescriptionTargetOption
     {

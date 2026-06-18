@@ -1,9 +1,9 @@
 using System;
 using System.IO;
 using System.Xml.Serialization;
-using CaCuSibAutoPlan.Shared.Models;
+using CaCuSibAutoPlan.Models;
 
-namespace CaCuSibAutoPlan.Shared.Services
+namespace CaCuSibAutoPlan.Services
 {
     public class SettingsService
     {

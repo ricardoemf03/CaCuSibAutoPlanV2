@@ -15,11 +15,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B0D97EB6-74F8-4E40-92D1-8B7146E00F11}.Debug|x64.ActiveCfg = Debug|x64
-		{B0D97EB6-74F8-4E40-92D1-8B7146E00F11}.Debug|x64.Build.0 = Debug|x64
 		{B0D97EB6-74F8-4E40-92D1-8B7146E00F11}.Release|x64.ActiveCfg = Release|x64
 		{B0D97EB6-74F8-4E40-92D1-8B7146E00F11}.Release|x64.Build.0 = Release|x64
 		{C6CF7D3A-5B7C-4F61-8B74-4E76C56386B7}.Debug|x64.ActiveCfg = Debug|x64
-		{C6CF7D3A-5B7C-4F61-8B74-4E76C56386B7}.Debug|x64.Build.0 = Debug|x64
 		{C6CF7D3A-5B7C-4F61-8B74-4E76C56386B7}.Release|x64.ActiveCfg = Release|x64
 		{C6CF7D3A-5B7C-4F61-8B74-4E76C56386B7}.Release|x64.Build.0 = Release|x64
 		{5D592482-D3AF-4EB5-8A06-7347D5D1955C}.Debug|x64.ActiveCfg = Debug|x64
@@ -29,5 +27,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB49DC4C-FC44-4719-A2F1-8F52DAAD6286}
 	EndGlobalSection
 EndGlobal

@@ -2,14 +2,14 @@ using System;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Windows;
-using CaCuSibAutoPlan.Interface.ViewModels;
-using CaCuSibAutoPlan.Interface.Views;
+using CaCuSibAutoPlan.ViewModels;
+using CaCuSibAutoPlan.Views;
 using VMS.TPS.Common.Model.API;
 using VMS.TPS.Common.Model.Types;
 
-[assembly: AssemblyVersion("1.0.0.1")]
-[assembly: AssemblyFileVersion("1.0.0.1")]
-[assembly: AssemblyInformationalVersion("1.0")]
+[assembly: AssemblyVersion("1.0.0.2")]
+[assembly: AssemblyFileVersion("1.0.0.2")]
+[assembly: AssemblyInformationalVersion("1.0.0.2")]
 [assembly: ESAPIScript(IsWriteable = true)]
 
 namespace VMS.TPS
