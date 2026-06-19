@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
@@ -349,8 +349,8 @@ namespace CaCuSibAutoPlan.ViewModels
             current.CropPtvOutsideBody = CropPtvOutsideBody;
             current.UseIntermediateDoseDuringOptimization = true;
 
-            if (string.IsNullOrWhiteSpace(current.CalculationScriptDllName))
-                current.CalculationScriptDllName = "FinalDoseCalculation3.esapi.dll";
+            //if (string.IsNullOrWhiteSpace(current.CalculationScriptDllName))
+            //    current.CalculationScriptDllName = "FinalDoseCalculation3.esapi.dll";
 
             return current;
         }

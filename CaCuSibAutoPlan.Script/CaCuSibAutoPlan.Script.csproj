@@ -53,6 +53,10 @@
     <Compile Include="Models\PrescriptionTargetOption.cs" />
     <Compile Include="Models\PtvOption.cs" />
     <Compile Include="Models\ScriptModule.cs" />
+    <Compile Include="Modules\DvhEstimation\DvhEstimationModule.cs" />
+    <Compile Include="Modules\FinalDoseCalculation\FinalDoseCalculationModule.cs" />
+    <Compile Include="Modules\OptimizationStructures\OptimizationStructuresModule.cs" />
+    <Compile Include="Modules\PlanParameters\PlanParametersModule.cs" />
     <Compile Include="Script.cs" />
     <Compile Include="Services\AutoPlanWorkflowService.cs" />
     <Compile Include="Services\DllPathResolver.cs" />
