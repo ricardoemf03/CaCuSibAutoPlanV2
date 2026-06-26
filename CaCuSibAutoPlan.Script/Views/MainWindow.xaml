@@ -136,7 +136,7 @@
                         Content="Save"
                         Command="{Binding SaveSettingsCommand}"
                         Height="34"
-                        VerticalAlignment="Top"/>
+                        VerticalAlignment="Top" Click="Button_Click"/>
             </Grid>
 
             <Grid Grid.Row="2">
