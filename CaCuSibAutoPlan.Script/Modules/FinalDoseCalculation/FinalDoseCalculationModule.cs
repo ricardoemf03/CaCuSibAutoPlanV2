@@ -11,6 +11,10 @@ namespace CaCuSibAutoPlan.Modules.FinalDoseCalculation
 {
     public sealed class FinalDoseCalculationModule
     {
+        // Cambia este valor manualmente:
+        // true  = usar GPU durante la optimización VMAT.
+        // false = no usar GPU durante la optimización VMAT.
+        private const bool UseGpuForVmatOptimization = true;
         public void Run(ScriptContext context, AutoPlanSettings settings)
         {
             if (context == null)
@@ -33,6 +37,7 @@ namespace CaCuSibAutoPlan.Modules.FinalDoseCalculation
 
             try
             {
+                ConfigureGpuForVmatOptimization(plan, UseGpuForVmatOptimization);
                 OptimizerResult optimizerResult = RunVmatOptimization(plan, ui);
 
                 if (!optimizerResult.Success)
@@ -58,6 +63,38 @@ namespace CaCuSibAutoPlan.Modules.FinalDoseCalculation
                     MessageBoxImage.Error);
 
                 throw;
+            }
+        }
+
+        private static void ConfigureGpuForVmatOptimization(
+            ExternalPlanSetup plan,
+            bool useGpu)
+        {
+            if (plan == null)
+                throw new ArgumentNullException("plan");
+
+            string optimizationModel = plan.GetCalculationModel(
+                CalculationType.PhotonVMATOptimization);
+
+            if (string.IsNullOrWhiteSpace(optimizationModel))
+            {
+                throw new ApplicationException(
+                    "El plan no tiene configurado un modelo de optimización VMAT.");
+            }
+
+            string gpuOptionValue = useGpu ? "Yes" : "No";
+
+            bool gpuOptionWasSet = plan.SetCalculationOption(
+                optimizationModel,
+                "UseGPU",
+                gpuOptionValue);
+
+            if (!gpuOptionWasSet)
+            {
+                throw new ApplicationException(
+                    "El modelo de optimización VMAT '" + optimizationModel +
+                    "' no expone la opción UseGPU. Verifica las opciones " +
+                    "disponibles para ese modelo en la configuración DCF.");
             }
         }
 

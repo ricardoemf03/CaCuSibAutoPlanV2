@@ -302,7 +302,7 @@ namespace CaCuSibAutoPlan.Modules.PlanParameters
                 options.PhotonVmatOptimizationModelId,
                 "Optimization");
             // Sin usar GPU por el momento
-            //ApplyOptimizationGpuOptionIfAvailable(plan, options);
+            //SApplyOptimizationGpuOptionIfAvailable(plan, options);
         }
 
         private static void SetCalculationModelIfAvailable(
