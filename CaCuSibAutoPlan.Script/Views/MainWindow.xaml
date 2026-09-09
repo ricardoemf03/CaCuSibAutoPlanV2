@@ -219,6 +219,7 @@
                             <RowDefinition Height="16"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
 
                         <TextBlock Grid.Row="0" Grid.Column="0" Text="Course Id:"/>
@@ -247,6 +248,12 @@
                                   Content="Crop PTV outside Body"
                                   IsChecked="{Binding CropPtvOutsideBody}"
                                   Margin="4"/>
+                        <CheckBox Grid.Row="6"
+                                  Grid.Column="0"
+                                  Grid.ColumnSpan="2"
+                                  Content="Use GPU for optimization"
+                                  IsChecked="{Binding UseGpuOptimization, Mode=TwoWay}"
+                                  Margin="4"/>  
                     </Grid>
                 </GroupBox>
 
@@ -330,6 +337,11 @@
                                  Margin="0,6,0,0"
                                  Value="{Binding WorkflowProgressValue}"
                                  IsIndeterminate="{Binding WorkflowProgressIsIndeterminate}"/>
+                    <TextBlock Text="Developed by: Ricardo Escobar Matzir"
+                                   HorizontalAlignment="Right"
+                                   Margin="0,8,0,0"
+                                   FontSize="11"
+                                   Foreground="#666666"/>   
                 </StackPanel>
             </Border>
         </Grid>

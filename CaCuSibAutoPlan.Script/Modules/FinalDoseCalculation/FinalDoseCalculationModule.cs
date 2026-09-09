@@ -14,7 +14,7 @@ namespace CaCuSibAutoPlan.Modules.FinalDoseCalculation
         // Cambia este valor manualmente:
         // true  = usar GPU durante la optimización VMAT.
         // false = no usar GPU durante la optimización VMAT.
-        private const bool UseGpuForVmatOptimization = true;
+        //private const bool UseGpuForVmatOptimization = true;
         public void Run(ScriptContext context, AutoPlanSettings settings)
         {
             if (context == null)
@@ -37,7 +37,7 @@ namespace CaCuSibAutoPlan.Modules.FinalDoseCalculation
 
             try
             {
-                ConfigureGpuForVmatOptimization(plan, UseGpuForVmatOptimization);
+                ConfigureGpuForVmatOptimization(plan, ui.UseGpuOptimization);
                 OptimizerResult optimizerResult = RunVmatOptimization(plan, ui);
 
                 if (!optimizerResult.Success)

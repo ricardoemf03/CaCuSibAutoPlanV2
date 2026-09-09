@@ -19,6 +19,7 @@ namespace CaCuSibAutoPlan.Models
         public string PrescriptionTargetId { get; set; }
         public bool HasInguinalNodes { get; set; }
         public bool CropPtvOutsideBody { get; set; }
+        public bool UseGpuOptimization { get; set; }
         public bool UseIntermediateDoseDuringOptimization { get; set; }
         public string VmatMlcId { get; set; }
         public string OptimizationScriptDllName { get; set; }
@@ -36,6 +37,7 @@ namespace CaCuSibAutoPlan.Models
             Ptv3DoseGyText = "57.5";
             HasInguinalNodes = false;
             CropPtvOutsideBody = false;
+            UseGpuOptimization = false;
             UseIntermediateDoseDuringOptimization = true;
             VmatMlcId = string.Empty;
             OptimizationScriptDllName = "opti3.esapi.dll";

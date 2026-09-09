@@ -34,6 +34,7 @@ namespace CaCuSibAutoPlan.ViewModels
 
         private bool _hasInguinalNodes;
         private bool _cropPtvOutsideBody;
+        private bool _useGpuOptimization;
         private bool _isBusy;
         private bool _workflowProgressIsIndeterminate;
         private double _workflowProgressValue;
@@ -130,6 +131,15 @@ namespace CaCuSibAutoPlan.ViewModels
         {
             get { return _cropPtvOutsideBody; }
             set { _cropPtvOutsideBody = value; OnPropertyChanged(); }
+        }
+        public bool UseGpuOptimization
+        {
+            get { return _useGpuOptimization; }
+            set
+            {
+                _useGpuOptimization = value;
+                OnPropertyChanged();
+            }
         }
 
         public bool IsBusy
@@ -231,6 +241,7 @@ namespace CaCuSibAutoPlan.ViewModels
             SelectedMachineId = string.IsNullOrWhiteSpace(saved.MachineId) ? "HAL1102" : saved.MachineId;
             HasInguinalNodes = saved.HasInguinalNodes;
             CropPtvOutsideBody = saved.CropPtvOutsideBody;
+            UseGpuOptimization = saved.UseGpuOptimization;
 
             WorkflowProgressValue = 0;
             WorkflowProgressText = "Listo para ejecutar AutoPlan.";
@@ -347,6 +358,7 @@ namespace CaCuSibAutoPlan.ViewModels
 
             current.HasInguinalNodes = HasInguinalNodes;
             current.CropPtvOutsideBody = CropPtvOutsideBody;
+            current.UseGpuOptimization = UseGpuOptimization;
             current.UseIntermediateDoseDuringOptimization = true;
 
             //if (string.IsNullOrWhiteSpace(current.CalculationScriptDllName))
