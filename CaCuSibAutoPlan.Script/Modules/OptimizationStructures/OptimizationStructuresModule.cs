@@ -377,14 +377,14 @@ namespace CaCuSibAutoPlan.Modules.OptimizationStructures
             return new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase)
             {
                 { "Bladder", new[] { "Bladder", "BLADDER" } },
-                { "Rectum", new[] { "Rectum", "RECTUM" } },
+                { "Rectum", new[] { "Rectum", "RECTUM", "Rectum_F", "Rectum_M" } },
                 { "ColonSigmoid", new[] { "Colon_Sigmoid", "Sigmoid", "ColonSigmoid" } },
                 { "SpinalCord", new[] { "SpinalCord", "Spinal_Cord", "Cord", "SPINALCORD" } },
                 { "CaudaEquina", new[] { "CaudaEquina", "Cauda_Equina", "CAUDAEQUINA" } },
                 { "KidneyL", new[] { "Kidney_L", "Kidney L", "Left Kidney", "LT Kidney" } },
                 { "KidneyR", new[] { "Kidney_R", "Kidney R", "Right Kidney", "RT Kidney" } },
-                { "FemoralHeadL", new[] { "Femoral_Head_L", "FemoralHead_L", "FemHead_L", "Left Femoral Head" } },
-                { "FemoralHeadR", new[] { "Femoral_Head_R", "FemoralHead_R", "FemHead_R", "Right Femoral Head" } },
+                { "FemoralHeadL", new[] { "Femoral_Head_L", "FemoralHead_L", "FemHead_L", "Left Femoral Head", "Femur_L" } },
+                { "FemoralHeadR", new[] { "Femoral_Head_R", "FemoralHead_R", "FemHead_R", "Right Femoral Head", "Femur_R" } },
             };
         }
 
