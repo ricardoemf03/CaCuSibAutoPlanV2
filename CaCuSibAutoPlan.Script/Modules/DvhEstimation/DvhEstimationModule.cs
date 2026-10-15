@@ -619,7 +619,7 @@ namespace CaCuSibAutoPlan.Modules.DvhEstimation
                 new OarAliasRule("Bladder",        "Bladder",     new[] { "Bladder", "BLADDER" }),
                 new OarAliasRule("BowelBag",       "Bowel_Bag",   new[] { "Bowel_Bag", "BowelBag", "BOWEL_BAG" }),
                 new OarAliasRule("Rectum",         "Rectum",      new[] { "Rectum", "RECTUM" }),
-                new OarAliasRule("ColonSigmoid",   "Rectum",      new[] { "Colon_Sigmoid", "Sigmoid", "ColonSigmoid" }),
+                new OarAliasRule("ColonSigmoid",   "Colon_Sigmoid",      new[] { "Colon_Sigmoid", "Sigmoid", "ColonSigmoid" }),
                 new OarAliasRule("SpinalCord",     "SpinalCord",  new[] { "SpinalCord", "Spinal_Cord", "Cord", "SPINALCORD" }),
                 new OarAliasRule("CaudaEquina",    "SpinalCord",  new[] { "CaudaEquina", "Cauda_Equina", "CAUDAEQUINA" }),
                 new OarAliasRule("KidneyL",        "Kidney",      new[] { "Kidney_L", "Kidney L", "Left Kidney", "LT Kidney" }),
@@ -893,7 +893,7 @@ namespace CaCuSibAutoPlan.Modules.DvhEstimation
         {
             return new DvhEstimationRequest
             {
-                DesiredModelName = "PLV-INCAN",
+                DesiredModelName = "Pelvis Female",
                 RequirePublishedAndTrained = true,
                 ShowDebugSummary = true,
                 UseAutomaticOarAliasMatching = true,
@@ -914,9 +914,9 @@ namespace CaCuSibAutoPlan.Modules.DvhEstimation
                     new TargetDoseMapping("PTV_57.5Gy", 57.5, "PTV_50Gy"),
 
                     // Aros / z_PTV_* con dosis explícita.
-                    new TargetDoseMapping("z_PTV_A45Gy",   45.0, "z_PTV_50GGy"),
-                    new TargetDoseMapping("z_PTV_A55Gy",   55.0, "z_PTV_50GGy"),
-                    new TargetDoseMapping("z_PTV_A57.5Gy", 57.5, "z_PTV_50GGy")
+                    new TargetDoseMapping("z_PTV_A45Gy",   45.0, "z_PTV_50Gy"),
+                    new TargetDoseMapping("z_PTV_A55Gy",   55.0, "z_PTV_50Gy"),
+                    new TargetDoseMapping("z_PTV_A57.5Gy", 57.5, "z_PTV_50Gy")
                 },
 
                 // ==============================================================
@@ -969,7 +969,7 @@ namespace CaCuSibAutoPlan.Modules.DvhEstimation
 
             return new DvhEstimationRequest
             {
-                DesiredModelName = "PLV-INCAN",
+                DesiredModelName = "Pelvis Female",
                 RequirePublishedAndTrained = true,
                 ShowDebugSummary = true,
                 UseAutomaticOarAliasMatching = true,
@@ -1044,7 +1044,7 @@ namespace CaCuSibAutoPlan.Modules.DvhEstimation
             // Aro asociado con la misma dosis
             if (!string.IsNullOrWhiteSpace(ringId))
             {
-                targets.Add(new TargetDoseMapping(ringId, doseGy.Value, "z_PTV_50GGy"));
+                targets.Add(new TargetDoseMapping(ringId, doseGy.Value, "z_PTV_50Gy"));
             }
         }
 
